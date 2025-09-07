@@ -1,0 +1,245 @@
+/Users/dariakorsun/labs/Computer_labs/lab_3/x86_o0.asm
+
+
+lab3_o0_x86.o:	file format mach-o arm
+
+Disassembly of section __TEXT,__text:
+
+00000000 <_CalculateSin>:
+       0: e92d4080     	push	{r7, lr}
+       4: e1a0700d     	mov	r7, sp
+       8: e24dd030     	sub	sp, sp, #48
+       c: e3cdd007     	bic	sp, sp, #7
+      10: e58d102c     	str	r1, [sp, #0x2c]
+      14: e58d0028     	str	r0, [sp, #0x28]
+      18: e58d2024     	str	r2, [sp, #0x24]
+      1c: e59d0028     	ldr	r0, [sp, #0x28]
+      20: e59d102c     	ldr	r1, [sp, #0x2c]
+      24: e58d101c     	str	r1, [sp, #0x1c]
+      28: e58d0018     	str	r0, [sp, #0x18]
+      2c: e59d0028     	ldr	r0, [sp, #0x28]
+      30: e59d102c     	ldr	r1, [sp, #0x2c]
+      34: e58d1014     	str	r1, [sp, #0x14]
+      38: e58d0010     	str	r0, [sp, #0x10]
+      3c: e3a00002     	mov	r0, #2
+      40: e58d000c     	str	r0, [sp, #0xc]
+      44: eaffffff     	b	0x48 <_CalculateSin+0x48> @ imm = #-0x4
+      48: e59d000c     	ldr	r0, [sp, #0xc]
+      4c: e59d1024     	ldr	r1, [sp, #0x24]
+      50: e1500001     	cmp	r0, r1
+      54: ca000027     	bgt	0xf8 <_CalculateSin+0xf8> @ imm = #0x9c
+      58: eaffffff     	b	0x5c <_CalculateSin+0x5c> @ imm = #-0x4
+      5c: e59d2028     	ldr	r2, [sp, #0x28]
+      60: e59d302c     	ldr	r3, [sp, #0x2c]
+      64: e1a00002     	mov	r0, r2
+      68: e1a01003     	mov	r1, r3
+      6c: ebffffe3     	bl	0x0 <_CalculateSin>     @ imm = #-0x74
+      70: e58d0004     	str	r0, [sp, #0x4]
+      74: e2210102     	eor	r0, r1, #-2147483648
+      78: e58d0008     	str	r0, [sp, #0x8]
+      7c: e59d200c     	ldr	r2, [sp, #0xc]
+      80: e3e00000     	mvn	r0, #0
+      84: e0801082     	add	r1, r0, r2, lsl #1
+      88: e3e00001     	mvn	r0, #1
+      8c: e0802082     	add	r2, r0, r2, lsl #1
+      90: e0000291     	<unknown>
+      94: ebffffd9     	bl	0x0 <_CalculateSin>     @ imm = #-0x9c
+      98: e1a02000     	mov	r2, r0
+      9c: e59d0004     	ldr	r0, [sp, #0x4]
+      a0: e1a03001     	mov	r3, r1
+      a4: e59d1008     	ldr	r1, [sp, #0x8]
+      a8: ebffffd4     	bl	0x0 <_CalculateSin>     @ imm = #-0xb0
+      ac: e1a02000     	mov	r2, r0
+      b0: e1a03001     	mov	r3, r1
+      b4: e59d0018     	ldr	r0, [sp, #0x18]
+      b8: e59d101c     	ldr	r1, [sp, #0x1c]
+      bc: ebffffcf     	bl	0x0 <_CalculateSin>     @ imm = #-0xc4
+      c0: e58d101c     	str	r1, [sp, #0x1c]
+      c4: e58d0018     	str	r0, [sp, #0x18]
+      c8: e59d2018     	ldr	r2, [sp, #0x18]
+      cc: e59d301c     	ldr	r3, [sp, #0x1c]
+      d0: e59d0010     	ldr	r0, [sp, #0x10]
+      d4: e59d1014     	ldr	r1, [sp, #0x14]
+      d8: ebffffc8     	bl	0x0 <_CalculateSin>     @ imm = #-0xe0
+      dc: e58d1014     	str	r1, [sp, #0x14]
+      e0: e58d0010     	str	r0, [sp, #0x10]
+      e4: eaffffff     	b	0xe8 <_CalculateSin+0xe8> @ imm = #-0x4
+      e8: e59d000c     	ldr	r0, [sp, #0xc]
+      ec: e2800001     	add	r0, r0, #1
+      f0: e58d000c     	str	r0, [sp, #0xc]
+      f4: eaffffd3     	b	0x48 <_CalculateSin+0x48> @ imm = #-0xb4
+      f8: e59d0010     	ldr	r0, [sp, #0x10]
+      fc: e59d1014     	ldr	r1, [sp, #0x14]
+     100: e1a0d007     	mov	sp, r7
+     104: e8bd4080     	pop	{r7, lr}
+     108: e12fff1e     	<unknown>
+
+/Users/dariakorsun/labs/Computer_labs/lab_3/x86_o3.asm
+
+
+lab3_o3_x86.o:	file format mach-o arm
+
+Disassembly of section __TEXT,__text:
+
+00000000 <_CalculateSin>:
+       0: e92d40f0     	push	{r4, r5, r6, r7, lr}
+       4: e28d700c     	add	r7, sp, #12
+       8: e92d0d00     	push	{r8, r10, r11}
+       c: e24dd008     	sub	sp, sp, #8
+      10: e1a0b001     	mov	r11, r1
+      14: e1a06000     	mov	r6, r0
+      18: e3520002     	cmp	r2, #2
+      1c: ba000024     	blt	0xb4 <_CalculateSin+0xb4> @ imm = #0x90
+      20: e1a04002     	mov	r4, r2
+      24: e22b1102     	eor	r1, r11, #-2147483648
+      28: e1a00006     	mov	r0, r6
+      2c: e1a02006     	mov	r2, r6
+      30: e1a0300b     	mov	r3, r11
+      34: ebfffff1     	bl	0x0 <_CalculateSin>     @ imm = #-0x3c
+      38: e2448001     	sub	r8, r4, #1
+      3c: e3a0a002     	mov	r10, #2
+      40: e1a05006     	mov	r5, r6
+      44: e1a0400b     	mov	r4, r11
+      48: e58d0004     	str	r0, [sp, #0x4]
+      4c: e58d1000     	str	r1, [sp]
+      50: e28a1001     	add	r1, r10, #1
+      54: e0000a91     	<unknown>
+      58: ebffffe8     	bl	0x0 <_CalculateSin>     @ imm = #-0x60
+      5c: e1a02000     	mov	r2, r0
+      60: e1a03001     	mov	r3, r1
+      64: e59d0004     	ldr	r0, [sp, #0x4]
+      68: e59d1000     	ldr	r1, [sp]
+      6c: ebffffe3     	bl	0x0 <_CalculateSin>     @ imm = #-0x74
+      70: e1a02000     	mov	r2, r0
+      74: e1a03001     	mov	r3, r1
+      78: e1a00005     	mov	r0, r5
+      7c: e1a01004     	mov	r1, r4
+      80: ebffffde     	bl	0x0 <_CalculateSin>     @ imm = #-0x88
+      84: e1a05000     	mov	r5, r0
+      88: e1a04001     	mov	r4, r1
+      8c: e1a00006     	mov	r0, r6
+      90: e1a0100b     	mov	r1, r11
+      94: e1a02005     	mov	r2, r5
+      98: e1a03004     	mov	r3, r4
+      9c: ebffffd7     	bl	0x0 <_CalculateSin>     @ imm = #-0xa4
+      a0: e1a06000     	mov	r6, r0
+      a4: e1a0b001     	mov	r11, r1
+      a8: e28aa002     	add	r10, r10, #2
+      ac: e2588001     	subs	r8, r8, #1
+      b0: 1affffe6     	bne	0x50 <_CalculateSin+0x50> @ imm = #-0x68
+      b4: e1a00006     	mov	r0, r6
+      b8: e1a0100b     	mov	r1, r11
+      bc: e247d018     	sub	sp, r7, #24
+      c0: e8bd0d00     	pop	{r8, r10, r11}
+      c4: e8bd40f0     	pop	{r4, r5, r6, r7, lr}
+      c8: e12fff1e     	<unknown>
+
+/Users/dariakorsun/labs/Computer_labs/lab_3/x86-64_o0.asm
+
+
+lab3_o0_x86-64.o:	file format mach-o 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <_CalculateSin>:
+       0: 55                           	pushq	%rbp
+       1: 48 89 e5                     	movq	%rsp, %rbp
+       4: f2 0f 11 45 f8               	movsd	%xmm0, -0x8(%rbp)
+       9: 48 89 7d f0                  	movq	%rdi, -0x10(%rbp)
+       d: f2 0f 10 45 f8               	movsd	-0x8(%rbp), %xmm0
+      12: f2 0f 11 45 e8               	movsd	%xmm0, -0x18(%rbp)
+      17: f2 0f 10 45 f8               	movsd	-0x8(%rbp), %xmm0
+      1c: f2 0f 11 45 e0               	movsd	%xmm0, -0x20(%rbp)
+      21: 48 c7 45 d8 02 00 00 00      	movq	$0x2, -0x28(%rbp)
+      29: 48 8b 45 d8                  	movq	-0x28(%rbp), %rax
+      2d: 48 3b 45 f0                  	cmpq	-0x10(%rbp), %rax
+      31: 7f 6b                        	jg	0x9e <_CalculateSin+0x9e>
+      33: f2 0f 10 45 f8               	movsd	-0x8(%rbp), %xmm0
+      38: f2 0f 59 45 f8               	mulsd	-0x8(%rbp), %xmm0
+      3d: 66 48 0f 7e c0               	movq	%xmm0, %rax
+      42: 48 b9 00 00 00 00 00 00 00 80	movabsq	$-0x8000000000000000, %rcx ## imm = 0x8000000000000000
+      4c: 48 31 c8                     	xorq	%rcx, %rax
+      4f: 66 48 0f 6e c0               	movq	%rax, %xmm0
+      54: 48 8b 45 d8                  	movq	-0x28(%rbp), %rax
+      58: 48 d1 e0                     	shlq	%rax
+      5b: 48 83 e8 01                  	subq	$0x1, %rax
+      5f: 48 8b 4d d8                  	movq	-0x28(%rbp), %rcx
+      63: 48 d1 e1                     	shlq	%rcx
+      66: 48 83 e9 02                  	subq	$0x2, %rcx
+      6a: 48 0f af c1                  	imulq	%rcx, %rax
+      6e: f2 48 0f 2a c8               	cvtsi2sd	%rax, %xmm1
+      73: f2 0f 5e c1                  	divsd	%xmm1, %xmm0
+      77: f2 0f 59 45 e8               	mulsd	-0x18(%rbp), %xmm0
+      7c: f2 0f 11 45 e8               	movsd	%xmm0, -0x18(%rbp)
+      81: f2 0f 10 45 e8               	movsd	-0x18(%rbp), %xmm0
+      86: f2 0f 58 45 e0               	addsd	-0x20(%rbp), %xmm0
+      8b: f2 0f 11 45 e0               	movsd	%xmm0, -0x20(%rbp)
+      90: 48 8b 45 d8                  	movq	-0x28(%rbp), %rax
+      94: 48 83 c0 01                  	addq	$0x1, %rax
+      98: 48 89 45 d8                  	movq	%rax, -0x28(%rbp)
+      9c: eb 8b                        	jmp	0x29 <_CalculateSin+0x29>
+      9e: f2 0f 10 45 e0               	movsd	-0x20(%rbp), %xmm0
+      a3: 5d                           	popq	%rbp
+      a4: c3                           	retq
+
+/Users/dariakorsun/labs/Computer_labs/lab_3/x86-64_o3.asm
+
+
+lab3_o3_x86-64.o:	file format mach-o 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <_CalculateSin>:
+       0: 48 83 ff 02                  	cmpq	$0x2, %rdi
+       4: 0f 8c bd 00 00 00            	jl	0xc7 <_CalculateSin+0xc7>
+       a: 55                           	pushq	%rbp
+       b: 48 89 e5                     	movq	%rsp, %rbp
+       e: 66 0f 28 0d ba 00 00 00      	movapd	0xba(%rip), %xmm1       ## 0xd0 <_CalculateSin+0xd0>
+      16: 66 0f 57 c8                  	xorpd	%xmm0, %xmm1
+      1a: f2 0f 59 c8                  	mulsd	%xmm0, %xmm1
+      1e: 48 8d 4f ff                  	leaq	-0x1(%rdi), %rcx
+      22: 48 83 ff 02                  	cmpq	$0x2, %rdi
+      26: 75 13                        	jne	0x3b <_CalculateSin+0x3b>
+      28: b8 04 00 00 00               	movl	$0x4, %eax
+      2d: 66 0f 28 d0                  	movapd	%xmm0, %xmm2
+      31: f6 c1 01                     	testb	$0x1, %cl
+      34: 75 70                        	jne	0xa6 <_CalculateSin+0xa6>
+      36: e9 8b 00 00 00               	jmp	0xc6 <_CalculateSin+0xc6>
+      3b: 48 89 ca                     	movq	%rcx, %rdx
+      3e: 48 83 e2 fe                  	andq	$-0x2, %rdx
+      42: b8 05 00 00 00               	movl	$0x5, %eax
+      47: 66 0f 28 d0                  	movapd	%xmm0, %xmm2
+      4b: 0f 1f 44 00 00               	nopl	(%rax,%rax)
+      50: 48 8d 70 fe                  	leaq	-0x2(%rax), %rsi
+      54: 48 8d 78 fd                  	leaq	-0x3(%rax), %rdi
+      58: 48 0f af f7                  	imulq	%rdi, %rsi
+      5c: 0f 57 db                     	xorps	%xmm3, %xmm3
+      5f: f2 48 0f 2a de               	cvtsi2sd	%rsi, %xmm3
+      64: 66 0f 28 e1                  	movapd	%xmm1, %xmm4
+      68: f2 0f 5e e3                  	divsd	%xmm3, %xmm4
+      6c: f2 0f 59 e2                  	mulsd	%xmm2, %xmm4
+      70: f2 0f 58 c4                  	addsd	%xmm4, %xmm0
+      74: 48 8d 70 ff                  	leaq	-0x1(%rax), %rsi
+      78: 48 0f af f0                  	imulq	%rax, %rsi
+      7c: 0f 57 db                     	xorps	%xmm3, %xmm3
+      7f: f2 48 0f 2a de               	cvtsi2sd	%rsi, %xmm3
+      84: 66 0f 28 d1                  	movapd	%xmm1, %xmm2
+      88: f2 0f 5e d3                  	divsd	%xmm3, %xmm2
+      8c: f2 0f 59 d4                  	mulsd	%xmm4, %xmm2
+      90: f2 0f 58 c2                  	addsd	%xmm2, %xmm0
+      94: 48 83 c0 04                  	addq	$0x4, %rax
+      98: 48 83 c2 fe                  	addq	$-0x2, %rdx
+      9c: 75 b2                        	jne	0x50 <_CalculateSin+0x50>
+      9e: 48 ff c8                     	decq	%rax
+      a1: f6 c1 01                     	testb	$0x1, %cl
+      a4: 74 20                        	je	0xc6 <_CalculateSin+0xc6>
+      a6: 48 8d 48 ff                  	leaq	-0x1(%rax), %rcx
+      aa: 48 83 c0 fe                  	addq	$-0x2, %rax
+      ae: 48 0f af c1                  	imulq	%rcx, %rax
+      b2: 0f 57 db                     	xorps	%xmm3, %xmm3
+      b5: f2 48 0f 2a d8               	cvtsi2sd	%rax, %xmm3
+      ba: f2 0f 5e cb                  	divsd	%xmm3, %xmm1
+      be: f2 0f 59 d1                  	mulsd	%xmm1, %xmm2
+      c2: f2 0f 58 c2                  	addsd	%xmm2, %xmm0
+      c6: 5d                           	popq	%rbp
+      c7: c3                           	retq
